@@ -12,7 +12,7 @@ export const meta = {
   description:
     'A look at what Builders are and how they are used with ZEIT Now deployment Builds to achieve production-ready outputs.',
   editUrl: 'pages/docs/v2/advanced/builders.mdx',
-  lastEdited: '2019-08-24T00:35:20.000Z'
+  lastEdited: '2019-08-30T20:10:34.000Z'
 }
 
 Builders are modules that transform your source code into compiled outputs, being either static files and/or [Serverless Functions](https://zeit.co/docs/v2/advanced/concepts/lambdas/), which are served by our [CDN at the edge](https://zeit.co/docs/v2/advanced/concepts/cdn-and-global-distribution/).
@@ -764,6 +764,12 @@ Then, [expose the build env](/docs/v2/deployments/environment-variables-and-secr
 </Caption>
 
 This will allow you to use `process.env.customKey` and `process.env.mySecret` in your code.
+
+#### Using the Static Folder
+
+The usage of imports from the `/static` folder is disabled for performance reasons. These assets can still be accessed at their regular path however.
+
+If you want to import static files, we recommend creating a directory with a different name.
 
 ### Advanced Go Usage
 
