@@ -12,7 +12,7 @@ export const meta = {
   description:
     'A look at what Builders are and how they are used with ZEIT Now deployment Builds to achieve production-ready outputs.',
   editUrl: 'pages/docs/v2/advanced/builders.mdx',
-  lastEdited: '2019-08-24T00:35:20.000Z'
+  lastEdited: '2019-09-02T03:53:55.000Z'
 }
 
 Builders are modules that transform your source code into compiled outputs, being either static files and/or [Serverless Functions](https://zeit.co/docs/v2/advanced/concepts/lambdas/), which are served by our [CDN at the edge](https://zeit.co/docs/v2/advanced/concepts/cdn-and-global-distribution/).
@@ -813,6 +813,20 @@ With GitHub, you will need to [create a personal token](https://github.com/setti
   An example <InlineCode>now.json</InlineCode> file containing a build
   environment variable with the value of GitHub credentials.
 </Caption>
+
+#### Go Build Configuration
+
+You can provide any custom build flags by using `GO_BUILD_FLAGS`
+
+```json
+{
+  "build": {
+    "env": {
+      "GO_BUILD_FLAGS": "-ldflags '-s -w'"
+    }
+  }
+}
+```
 
 ### Advanced Python Usage
 
